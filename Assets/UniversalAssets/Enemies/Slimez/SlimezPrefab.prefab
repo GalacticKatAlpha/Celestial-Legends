@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2100701809441408367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0109371
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.2765036
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3a991f08f8226d43aa8c493e784f6c0,
+        type: 3}
+      propertyPath: m_Name
+      value: Slimez
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a991f08f8226d43aa8c493e784f6c0, type: 3}
+--- !u!1 &1289816180743977022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b3a991f08f8226d43aa8c493e784f6c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2100701809441408367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2512238859396212294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289816180743977022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307ea6e3c7b220243b4e677862b295d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
