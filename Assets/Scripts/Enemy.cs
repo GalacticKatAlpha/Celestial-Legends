@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public float speed = 5f;
+    [SerializeField] private float speed = 5f;
 
     private WaveSpawner waveSpawner;
 
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     private void Start ()
     {
-        waveSpawner = GetComponentInParent<WaveSpawner>();
+        waveSpawner = GetComponent<WaveSpawner>();
         target = Waypoints.waypoints[0];
     }
 
@@ -34,10 +34,7 @@ public class Enemy : MonoBehaviour
         if (wavepointIndex >= Waypoints.waypoints.Length - 1)
         {
             Destroy(gameObject);
-
             waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
-
-            
         }
 
         wavepointIndex++;

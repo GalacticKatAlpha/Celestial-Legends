@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -15,11 +13,10 @@ public class WaveSpawner : MonoBehaviour
 
     private bool readyToCountDown;
 
-    private void start()
+    private void Start()
     {
         readyToCountDown = true;
-
-        for (int i = 0; i < waves.Length; i++)
+        for (int i = 0; i <waves.Length; i++)
         {
             waves[i].enemiesLeft = waves[i].enemies.Length;
         }
@@ -27,20 +24,14 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (currentWaveIndex >= waves.Length)
-        {
-            Debug.Log("TEST");
-            return;
-        }
-
-        if(readyToCountDown == true)
+        if (readyToCountDown == true)
         {
             countdown -= Time.deltaTime;
         }
 
         if (countdown <= 0)
         {
-            readyToCountDown = false;
+            readyToCountDown= false;
 
             countdown = waves[currentWaveIndex].timeToNextWave;
 
@@ -49,29 +40,25 @@ public class WaveSpawner : MonoBehaviour
 
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
-            readyToCountDown = true;
+            readyToCountDown= true;
             currentWaveIndex++;
         }
+
     }
 
     private IEnumerator SpawnWave()
     {
-        if (currentWaveIndex < waves.Length)
+        for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
         {
-            for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
-            {
-                Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i],spawnPoint.transform);
+            Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
 
-                enemy.transform.SetParent(transform);
-
-                yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
-            }
+            yield return new WaitForSeconds(waves[currentWaveIndex].timeToNextEnemy);
         }
     }
-
 }
 
 [System.Serializable]
+
 public class Wave
 {
     public Enemy[] enemies;
@@ -80,5 +67,3 @@ public class Wave
 
     [HideInInspector] public int enemiesLeft;
 }
-
-
