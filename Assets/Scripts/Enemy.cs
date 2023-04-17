@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     private void Start ()
     {
-        waveSpawner = GetComponent<WaveSpawner>();
+        waveSpawner = GetComponentInParent<WaveSpawner>();
         target = Waypoints.waypoints[0];
     }
 
