@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 5f; 
 
     private WaveSpawner waveSpawner;
 
@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
+            return;
         }
 
         wavepointIndex++;
