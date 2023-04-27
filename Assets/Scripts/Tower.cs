@@ -18,6 +18,9 @@ public class Tower : MonoBehaviour
     public Transform turnPoint;
     public float turnSpeed = 5f;
 
+    public GameObject bulletPrefab;
+    public Transform firepoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +80,13 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Fired");
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
+        Bullet bullet= bulletGO.GetComponent<Bullet>();
+
+        if(bullet != null)
+        {
+            bullet.Seek(target);
+        }
     }
 
     private void OnDrawGizmosSelected()
