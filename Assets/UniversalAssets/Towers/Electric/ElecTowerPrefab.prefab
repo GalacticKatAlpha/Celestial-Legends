@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5419791466054855319}
   m_Layer: 0
-  m_Name: FirePoint
+  m_Name: Ele_FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electricity
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1944179690014929979, guid: ea764edb133ade345ada4f050480c8ef, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ea764edb133ade345ada4f050480c8ef, type: 3}
 --- !u!4 &7011664686030474867 stripped
