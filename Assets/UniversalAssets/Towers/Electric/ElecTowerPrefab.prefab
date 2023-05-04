@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5419791466054855319}
   m_Layer: 0
-  m_Name: Ele_FirePoint
+  m_Name: EleFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 6077086892677901448}
   - component: {fileID: 7204068086560891693}
   - component: {fileID: 4908090749999929319}
+  - component: {fileID: 2109361744}
   m_Layer: 0
   m_Name: ElecTowerPrefab
   m_TagString: Untagged
@@ -56,14 +57,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6853905754442692146}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.306, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2949708143362867936}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7204068086560891693
 MeshFilter:
@@ -117,6 +118,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2109361744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6853905754442692146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c9940813394c4419a962f01af50cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  fireRate: 2
+  enemyTag: Enemy
+  turnPoint: {fileID: 2949708143362867936}
+  turnSpeed: 1
+  bulletPrefab: {fileID: 3469439839993977655, guid: ea764edb133ade345ada4f050480c8ef,
+    type: 3}
+  firepoint: {fileID: 5419791466054855319}
 --- !u!1 &7969360646844240197
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469439839993977653, guid: ea764edb133ade345ada4f050480c8ef,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
+      value: 598.1381
       objectReference: {fileID: 0}
     - target: {fileID: 3469439839993977655, guid: ea764edb133ade345ada4f050480c8ef,
         type: 3}
