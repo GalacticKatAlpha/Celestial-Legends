@@ -17,19 +17,23 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public GameObject standardTurretPrefab;
-    public GameObject anotherTurretPrefab;
+    public GameObject firstTurretPrefab;
+    public GameObject secondTurretPrefab;
+    public GameObject thirdTurretPrefab;
 
-    private GameObject turretToBuild;
+    private TowerBlueprint turretToBuild;
 
-    public GameObject GetTurretToBuild()
+    public bool CanBuild { get { return turretToBuild != null;} }
+        
+    public void BuildTowerOn(Node node)
     {
-        return turretToBuild;
+        GameObject tower = (GameObject)Instantiate(turretToBuild.prefab, node.transform.position + node.GetBuildPosition(), Quaternion.identity);
+        node.turret = tower;
     }
 
-    public void SetTurretToBuild(GameObject turret)
+    public void SelectTurretToBuild(TowerBlueprint tower)
     {
-        turretToBuild = turret;
+        turretToBuild = tower;
     }
 
 }

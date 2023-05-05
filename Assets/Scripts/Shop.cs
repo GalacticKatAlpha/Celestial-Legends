@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public TowerBlueprint firstTurret;
+    public TowerBlueprint secondTurret;
+    public TowerBlueprint thirdTurret;
 
     BuildManager buildManager;
 
@@ -10,16 +13,22 @@ public class Shop : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
-    public void PurchaseStandardTurret()
+    public void SelectFirstSlotTurret()
     {
         Debug.Log("Test Purchase");
-        buildManager.SetTurretToBuild(buildManager.standardTurretPrefab);
+        buildManager.SelectTurretToBuild(firstTurret);
     }
 
-    public void PurchaseSecondaryTurret()
+    public void SelectSecondSlotTurret()
     {
-        Debug.Log("Test Secondary Purchase");
-        buildManager.SetTurretToBuild(buildManager.anotherTurretPrefab);
+        Debug.Log("Test Second Purchase");
+        buildManager.SelectTurretToBuild(secondTurret);
+    }
+
+    public void SelectThirdSlotTurret()
+    {
+        Debug.Log("Test Third Slot Purchase");
+        buildManager.SelectTurretToBuild(thirdTurret);
     }
 
 
