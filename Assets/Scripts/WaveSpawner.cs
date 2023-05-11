@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
@@ -6,6 +8,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private float countdown;
 
     [SerializeField] private GameObject spawnPoint;
+
+    public TextMeshProUGUI currentWaveText;
+    public TextMeshProUGUI nextWaveCountdownText;
 
     public Wave[] waves;
 
@@ -27,6 +32,8 @@ public class WaveSpawner : MonoBehaviour
         if (readyToCountDown == true)
         {
             countdown -= Time.deltaTime;
+
+            countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
         }
 
         if (countdown <= 0)
@@ -43,6 +50,9 @@ public class WaveSpawner : MonoBehaviour
             currentWaveIndex++;
             readyToCountDown = true;
         }
+
+        currentWaveText.text = "Wave: " + currentWaveIndex.ToString();
+        nextWaveCountdownText.text = "Next: " + Mathf.Round(countdown).ToString();
 
     }
 

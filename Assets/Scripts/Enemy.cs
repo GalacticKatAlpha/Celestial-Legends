@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
 
     private WaveSpawner waveSpawner;
 
+    public int health = 50;
+
     private Transform target;
     private int wavepointIndex = 0;
 
@@ -16,6 +18,20 @@ public class Enemy : MonoBehaviour
     {
         waveSpawner = GetComponentInParent<WaveSpawner>();
         target = Waypoints.waypoints[0];
+    }
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        if(health <= 0)
+        {
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 
     void Update ()
@@ -33,7 +49,7 @@ public class Enemy : MonoBehaviour
     {
         if (wavepointIndex >= Waypoints.waypoints.Length - 1)
         {
-            Destroy(gameObject);
+            EndPath();
             waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
             return;
         }
@@ -41,4 +57,11 @@ public class Enemy : MonoBehaviour
         wavepointIndex++;
         target = Waypoints.waypoints[wavepointIndex];
     }
+
+    void EndPath()
+    {
+        PlayerStats.Health--;
+        Destroy(gameObject);
+    }
+
 }

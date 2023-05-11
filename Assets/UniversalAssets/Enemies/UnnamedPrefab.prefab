@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 3918306988525457299}
   - component: {fileID: 8373310212313615777}
   - component: {fileID: 6051608728981892020}
+  - component: {fileID: 1077480761239502827}
   m_Layer: 0
   m_Name: UnnamedPrefab
   m_TagString: Enemy
@@ -560,7 +561,7 @@ Transform:
   - {fileID: 5475987078828120317}
   - {fileID: 234168475193119494}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &3918306988525457299
 MonoBehaviour:
@@ -575,6 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  health: 50
 --- !u!95 &8373310212313615777
 Animator:
   serializedVersion: 4
@@ -608,6 +610,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  health: 50
+--- !u!65 &1077480761239502827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325030977630261977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.742822, y: 6.837973, z: 1.2571383}
+  m_Center: {x: 0.004761666, y: 3.3094547, z: 0.042856224}
 --- !u!1 &4411130507438566075
 GameObject:
   m_ObjectHideFlags: 0
