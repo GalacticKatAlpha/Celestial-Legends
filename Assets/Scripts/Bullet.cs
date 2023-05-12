@@ -38,13 +38,13 @@ public class Bullet : MonoBehaviour
         transform.LookAt(target);
     }
 
-    void HitTarget()
-    {
-        Destroy(gameObject);
-    }
+    
 
     void Damage (Transform enemy)
     {
+
+        Debug.Log("Damaged");
+
         Enemy e = enemy.GetComponent<Enemy>();
 
         if(e != null )
@@ -52,6 +52,10 @@ public class Bullet : MonoBehaviour
             e.TakeDamage(damage);
         }
 
+    }
+    void HitTarget()
+    {
+        Destroy(gameObject);
     }
 
 }
