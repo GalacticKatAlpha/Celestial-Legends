@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1301515996207476253}
   - component: {fileID: 599356827275604554}
   - component: {fileID: 1292014208291555245}
+  - component: {fileID: 7200507721289627089}
   m_Layer: 0
   m_Name: FireBullet
   m_TagString: Untagged
@@ -120,6 +121,20 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7200507721289627089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737414669453214162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ad309129dae9b4091263edab125501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 70
+  damage: 50
 --- !u!1 &7915681744989649216
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +145,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1594212265356473122}
   - component: {fileID: 8775360666713990661}
-  - component: {fileID: 4760005606308666634}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -166,17 +180,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4760005606308666634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7915681744989649216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ad309129dae9b4091263edab125501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 70
-  damage: 50

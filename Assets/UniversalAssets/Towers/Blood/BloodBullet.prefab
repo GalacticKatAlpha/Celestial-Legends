@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5207821973177685311}
   - component: {fileID: 5207821973177685297}
   - component: {fileID: 5207821973177685310}
-  - component: {fileID: 147423983209909161}
   m_Layer: 0
   m_Name: BloodBurst
   m_TagString: Untagged
@@ -120,20 +119,6 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &147423983209909161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5207821973177685308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53ad309129dae9b4091263edab125501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 70
-  damage: 250
 --- !u!1 &5207821974289142220
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5207821974289142223}
   - component: {fileID: 6322272038878917756}
+  - component: {fileID: 1308973799854021026}
   m_Layer: 0
   m_Name: BloodBullet
   m_TagString: Untagged
@@ -180,3 +166,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1308973799854021026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207821974289142220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ad309129dae9b4091263edab125501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 70
+  damage: 250
