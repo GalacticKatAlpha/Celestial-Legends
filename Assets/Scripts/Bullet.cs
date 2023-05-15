@@ -43,8 +43,6 @@ public class Bullet : MonoBehaviour
     void Damage (Transform enemy)
     {
 
-        Debug.Log("Damaged");
-
         Enemy e = enemy.GetComponent<Enemy>();
 
         if(e != null )

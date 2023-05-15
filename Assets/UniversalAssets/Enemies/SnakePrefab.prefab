@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 2944334645538203055}
   - component: {fileID: 3411153185336971514}
   - component: {fileID: 3411153185336971515}
-  - component: {fileID: 6944724920730549394}
   m_Layer: 0
   m_Name: SnakePrefab
   m_TagString: Enemy
@@ -196,19 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   health: 50
---- !u!65 &6944724920730549394
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2564712500337475349}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9955306, y: 9.039593, z: 9.5874405}
-  m_Center: {x: 0.012763262, y: 4.0197964, z: 2.0113058}
 --- !u!1 &3594124012258958441
 GameObject:
   m_ObjectHideFlags: 0
