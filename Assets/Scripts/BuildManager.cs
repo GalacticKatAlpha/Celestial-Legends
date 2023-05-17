@@ -21,6 +21,7 @@ public class BuildManager : MonoBehaviour
     public GameObject firstTurretPrefab;
     public GameObject secondTurretPrefab;
     public GameObject thirdTurretPrefab;
+    public GameObject fourthTurretPrefab;
 
     private TowerBlueprint turretToBuild;
 
