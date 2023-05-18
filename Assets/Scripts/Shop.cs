@@ -32,10 +32,9 @@ public class Shop : MonoBehaviour
         buildManager.SelectTurretToBuild(thirdTurret);
     }
 
-    public void SelectFourthSlotTurret()
+    public void SelectfourthSlotTurret()
     {
-        Debug.Log("Test Fourth Slot Purchase");
+        Debug.Log("Test fourth Slot Purchase");
         buildManager.SelectTurretToBuild(fourthTurret);
     }
-
 }

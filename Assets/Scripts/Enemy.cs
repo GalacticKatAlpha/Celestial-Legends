@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     public int health = 50;
 
+    public int value = 50;
+
     private Transform target;
     private int wavepointIndex = 0;
 
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
+        PlayerStats.Money += value;
         Destroy(gameObject);
     }
 
