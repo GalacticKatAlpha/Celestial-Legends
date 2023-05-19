@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     private WaveSpawner waveSpawner;
 
-    public int health = 50;
+    public int health = 230;
 
     public int value = 50;
 
@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
+        waveSpawner.waves[waveSpawner.currentWaveIndex].enemiesLeft--;
         PlayerStats.Money += value;
         Destroy(gameObject);
     }
