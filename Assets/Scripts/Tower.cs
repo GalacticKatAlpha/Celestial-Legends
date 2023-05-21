@@ -7,11 +7,20 @@ public class Tower : MonoBehaviour
 {
     private Transform target;
 
-    [Header("Stats")]
+    [Header("Universal")]
 
     public float range = 15f;
+
+    [Header("Bullet Stats")]
+
+    public GameObject bulletPrefab;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+
+
+    [Header("Lazer Stats")]
+    public bool useLazer = false;
+    public LineRenderer lineRenderer;
 
     [Header("Requirements")]
 
@@ -19,7 +28,6 @@ public class Tower : MonoBehaviour
     public Transform turnPoint;
     public float turnSpeed = 5f;
 
-    public GameObject bulletPrefab;
     public Transform firepoint;
 
     // Start is called before the first frame update

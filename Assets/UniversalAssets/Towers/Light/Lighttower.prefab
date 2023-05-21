@@ -173,12 +173,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
+  bulletPrefab: {fileID: 0}
   fireRate: 1
+  useLazer: 1
+  lineRenderer: {fileID: 4971071306197718207}
   enemyTag: Enemy
   turnPoint: {fileID: 1642324055742263721}
   turnSpeed: 5
-  bulletPrefab: {fileID: 4298660507169525814, guid: 9048b3129f0ba4644912f082f2bffa3a,
-    type: 3}
   firepoint: {fileID: 1642324054148183321}
 --- !u!120 &4971071306197718207
 LineRenderer:
