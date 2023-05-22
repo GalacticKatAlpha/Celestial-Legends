@@ -6,6 +6,7 @@ public class Shop : MonoBehaviour
     public TowerBlueprint secondTurret;
     public TowerBlueprint thirdTurret;
     public TowerBlueprint fourthTurret;
+    public TowerBlueprint fifthTurret;
 
     BuildManager buildManager;
 
@@ -36,5 +37,11 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Test fourth Slot Purchase");
         buildManager.SelectTurretToBuild(fourthTurret);
+    }
+
+    public void SelectfifthSlotTurret()
+    {
+        Debug.Log("Test fifth Slot Purchase");
+        buildManager.SelectTurretToBuild(fifthTurret);
     }
 }

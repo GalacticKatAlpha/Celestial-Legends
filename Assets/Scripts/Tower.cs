@@ -69,22 +69,51 @@ public class Tower : MonoBehaviour
     {
         if(target == null)
         {
+            if(useLazer)
+            {
+                if(lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
             return;
         }
 
+        LockOnTarget();
+
+        if(useLazer)
+        {
+            Lazer();
+        }
+        else
+        {
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
+        }
+    }
+
+    void LockOnTarget()
+    {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(turnPoint.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         turnPoint.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
 
-        if(fireCountdown <=0f) 
+    void Lazer()
+    {
+        if (!lineRenderer.enabled)
         {
-            Shoot();
-            fireCountdown= 1f / fireRate;
+            lineRenderer.enabled= true;
         }
 
-        fireCountdown -= Time.deltaTime;
-
+        lineRenderer.SetPosition(0, firepoint.position);
+        lineRenderer.SetPosition(1, target.position);
     }
 
     void Shoot()
