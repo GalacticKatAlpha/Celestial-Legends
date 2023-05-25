@@ -6,6 +6,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     private Transform target;
+    private Enemy targetEnemy;
 
     [Header("Universal")]
 
@@ -20,6 +21,7 @@ public class Tower : MonoBehaviour
 
     [Header("Lazer Stats")]
     public bool useLazer = false;
+    public int damageOverTime = 20;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
     public Light impactLight;
@@ -59,6 +61,7 @@ public class Tower : MonoBehaviour
         if(nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
+            targetEnemy = nearestEnemy.GetComponent<Enemy>();
         }
         else
         {
@@ -111,6 +114,7 @@ public class Tower : MonoBehaviour
 
     void Lazer()
     {
+        targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled= true;

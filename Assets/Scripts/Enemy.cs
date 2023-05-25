@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     private WaveSpawner waveSpawner;
 
-    public int health = 230;
+    public float health = 230f;
 
     public int value = 50;
 
@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         target = Waypoints.waypoints[0];
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
         if(health <= 0)

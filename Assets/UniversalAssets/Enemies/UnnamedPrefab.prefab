@@ -576,6 +576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   health: 50
+  value: 50
 --- !u!95 &8373310212313615777
 Animator:
   serializedVersion: 4
@@ -610,6 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   health: 50
+  value: 50
 --- !u!1 &4411130507438566075
 GameObject:
   m_ObjectHideFlags: 0

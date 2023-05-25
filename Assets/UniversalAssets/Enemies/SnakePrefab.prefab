@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   health: 50
+  value: 50
 --- !u!1 &3594124012258958441
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,13 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+
+        if(GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             transform.RotateAround(Target.position, Vector3.up, Speed * Time.deltaTime);

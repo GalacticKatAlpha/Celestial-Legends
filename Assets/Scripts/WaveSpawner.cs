@@ -48,6 +48,7 @@ public class WaveSpawner : MonoBehaviour
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
             currentWaveIndex++;
+            PlayerStats.Rounds++;
             readyToCountDown = true;
         }
 
