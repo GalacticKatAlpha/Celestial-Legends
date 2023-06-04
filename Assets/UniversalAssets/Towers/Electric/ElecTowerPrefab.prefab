@@ -64,7 +64,7 @@ Transform:
   m_Children:
   - {fileID: 2949708143362867936}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7204068086560891693
 MeshFilter:
@@ -131,12 +131,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
+  bulletPrefab: {fileID: 3469439839993977655, guid: ea764edb133ade345ada4f050480c8ef,
+    type: 3}
   fireRate: 2
+  useLazer: 0
+  damageOverTime: 20
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
   enemyTag: Enemy
   turnPoint: {fileID: 2949708143362867936}
   turnSpeed: 1
-  bulletPrefab: {fileID: 3469439839993977655, guid: ea764edb133ade345ada4f050480c8ef,
-    type: 3}
   firepoint: {fileID: 5419791466054855319}
 --- !u!1 &7969360646844240197
 GameObject:
@@ -234,18 +239,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3469439839993977653, guid: ea764edb133ade345ada4f050480c8ef,
-        type: 3}
-      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
-      value: 598.1381
-      objectReference: {fileID: 0}
     - target: {fileID: 3469439839993977655, guid: ea764edb133ade345ada4f050480c8ef,
         type: 3}
       propertyPath: m_Name
       value: Electricity
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1944179690014929979, guid: ea764edb133ade345ada4f050480c8ef, type: 3}
+    - {fileID: -6041798750380202187, guid: ea764edb133ade345ada4f050480c8ef, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ea764edb133ade345ada4f050480c8ef, type: 3}
 --- !u!4 &7011664686030474867 stripped

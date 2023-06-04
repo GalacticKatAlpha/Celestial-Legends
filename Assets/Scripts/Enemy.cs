@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class Enemy : MonoBehaviour
 
     private WaveSpawner waveSpawner;
 
-    public float health = 230f;
+    public float startHealth = 230f;
+    private float health;
 
     public int value = 50;
+
+    [Header("UI Entries")]
+    public Image healthBar;
+
 
     private Transform target;
     private int wavepointIndex = 0;
@@ -20,11 +26,15 @@ public class Enemy : MonoBehaviour
     {
         waveSpawner = GetComponentInParent<WaveSpawner>();
         target = Waypoints.waypoints[0];
+        health = startHealth;
     }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
+
+        healthBar.fillAmount = health / startHealth;
+
         if(health <= 0)
         {
             Death();

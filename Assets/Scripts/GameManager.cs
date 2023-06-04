@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static bool gameIsOver;
 
     public GameObject gameOverUI;
+    public GameObject WinGameUI;
 
     private void Start()
     {
@@ -21,11 +22,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown("k"))
-        {
-            EndGame();
-        }
-
         if (PlayerStats.Health <= 0) 
         { 
             EndGame();
@@ -37,4 +33,11 @@ public class GameManager : MonoBehaviour
         gameIsOver = true;
         gameOverUI.SetActive(true);
     }
+
+    public void WinLevel()
+    {
+        gameIsOver= true;
+        WinGameUI.SetActive(true);
+    }
+
 }

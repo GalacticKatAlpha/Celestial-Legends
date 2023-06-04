@@ -16,6 +16,8 @@ public class WaveSpawner : MonoBehaviour
 
     public int currentWaveIndex = 0;
 
+    public GameManager gameManager;
+
     private bool readyToCountDown;
 
     private void Start()
@@ -45,6 +47,7 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
         }
 
+
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
             currentWaveIndex++;
@@ -54,6 +57,12 @@ public class WaveSpawner : MonoBehaviour
 
         currentWaveText.text = "Wave: " + currentWaveIndex.ToString();
         nextWaveCountdownText.text = "Next: " + Mathf.Round(countdown).ToString();
+
+        if(currentWaveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
 
     }
 
