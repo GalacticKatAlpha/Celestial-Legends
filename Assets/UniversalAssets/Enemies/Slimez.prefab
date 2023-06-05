@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3846689484953423544}
   - component: {fileID: 3328140108930974747}
   - component: {fileID: 2248425763078363841}
+  - component: {fileID: 461908640255576956}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -153,6 +154,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &461908640255576956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829307391718402524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa1df68043e06443a0945bef65644b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraToLookAt: {fileID: 0}
 --- !u!1 &4564421508890151486
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +302,7 @@ Transform:
   m_Children:
   - {fileID: 2103000527731319268}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6604340912405159335
 MeshFilter:
