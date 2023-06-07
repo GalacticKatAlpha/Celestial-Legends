@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level-Beach.unity
     guid: 12951903da13e1f4bacab2e7ea98f1ac
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level-Space.unity
+    guid: 56ca02290c3c8e542aa5ed471b1e6d05
   m_configObjects: {}

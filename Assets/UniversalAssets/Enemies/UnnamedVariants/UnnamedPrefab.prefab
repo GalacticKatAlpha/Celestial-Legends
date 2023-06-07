@@ -713,9 +713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307ea6e3c7b220243b4e677862b295d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  startHealth: 230
-  value: 50
+  speed: 0.75
+  startHealth: 300
+  value: 175
   healthBar: {fileID: 5044876572449717633}
 --- !u!1 &4411130507438566075
 GameObject:
