@@ -5803,7 +5803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Elemental Tower Defense
+  m_text: CELESTIAL LEGENDS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3843b41c74f3a83458b1bb087a425e14, type: 2}
   m_sharedMaterial: {fileID: -7786908596201727075, guid: 3843b41c74f3a83458b1bb087a425e14,
